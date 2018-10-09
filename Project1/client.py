@@ -1,16 +1,26 @@
 import socket
 import sys
 
-# Validate command line args
-if len(sys.argv) != 5:
+
+def print_usage():
     print("Usage: " + sys.argv[0] + " host port GET/PUT file")
     print("Example: " + sys.argv[0] + " www.google.com 80 GET index.html")
-    exit(0)
 
-# Parse the command line arguments
+
+# Parse and validate command line args
+if len(sys.argv) != 5:
+    print("Expected 4 arguments but found {}".format(len(sys.argv) - 1))
+    print_usage()
+    exit()
+
 host = sys.argv[1]
 port = sys.argv[2]
 method = sys.argv[3]
+if method not in ['GET', 'PUT']:
+    print("Invalid method " + method)
+    print_usage()
+    exit()
+
 filename = sys.argv[4]
 
 # The data received from the server. The data from each call to `recv` will be stored in a separate list item
@@ -23,14 +33,21 @@ data = []
 # find any references to automatic conversion in the docs. The examples from python.org (and elsewhere) don't mention
 # using `htons`.
 # I use `with` so that socket will automatically be closed.
-with socket.create_connection((host, port)) as conn:
-    # Must send a blank line `\r\n\` to signal end of request
+with socket.create_connection((host, port)) as s:
     # Use `ascii` encoding when converting string to bytes, because HTTP headers only support ASCII, per
     #  https://stackoverflow.com/questions/4400678/what-character-encoding-should-i-use-for-a-http-header
-    conn.sendall('{method} /{filename} HTTP/1.0\r\n\r\n'.format(method=method, filename=filename).encode('ascii'))
+    s.sendall('{method} /{filename} HTTP/1.1\r\n'.format(method=method, filename=filename).encode('ascii'))
+    if method == 'PUT':
+        # Assume filename points to a valid file
+        # Use `rb` to open the file in readonly mode with binary encoding
+        with open(filename, 'rb') as f:
+            s.sendfile(f)
+    # Must send a blank line `\r\n\` to signal end of request
+    s.sendall('\r\n'.encode('ascii'))
+
     # In Python 3.5 and later, this call will be retried automatically upon being interrupted by a signal
     while True:
-        buffer = conn.recv(1024)
+        buffer = s.recv(1024)
         if not buffer:
             break
         data.append(buffer)
