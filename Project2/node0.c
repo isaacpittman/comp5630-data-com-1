@@ -12,13 +12,14 @@ extern int YES;
 extern int NO;
 extern float clocktime;
 
-const static int INF = 999;
+const static int THIS_NODE = 0;
+
+int connectcosts0[4] = { 0,  1,  3, 7 };
 
 struct distance_table 
 {
   int costs[4][4];
 } dt0;
-
 
 /* students to write the following two routines, and maybe some others */
 
@@ -39,15 +40,21 @@ void rtinit0()
   /* Print called at time */
   printf("rtinit0 called at %f\n", clocktime);
 
-  /* Initialize distance table direct costs of 1, 3, and 7 to nodes 1, 2, and 3 */
-  const int INIT_ROW = 0;
-  dt0.costs[INIT_ROW][0] = 0;
-  dt0.costs[INIT_ROW][1] = 1;
-  dt0.costs[INIT_ROW][2] = 3;
-  dt0.costs[INIT_ROW][3] = 7;
+  /* Initialize all costs to infinity. We'll update directly connected nodes
+   * next. */
+  for (int fromnode = 0; fromnode <= 3; ++fromnode) {
+    for (int tonode = 0; tonode <= 3; ++tonode) {
+      dt0.costs[fromnode][tonode] = 999;
+    }
+  }
 
-  // Inform neighbors
+  /* Initialize direct costs of 1, 3, and 7 to nodes 1, 2, and 3 */
+  dt0.costs[THIS_NODE][THIS_NODE] = 0;
+  dt0.costs[1][1] = 1;
+  dt0.costs[2][2] = 3;
+  dt0.costs[3][3] = 7;
 
+  informneighbors0();
 
 }
 
@@ -71,6 +78,49 @@ void rtupdate0(rcvdpkt)
 {
   /* Print called at time */
   printf("rtupdate0 called at %f\n", clocktime);
+
+  int neighbor = rcvdpkt->sourceid;
+
+  /* Print sender */
+  printf("Sender of routing packet: %d\n", neighbor);
+
+  /* Did the distance table change? */
+  int isdistancechanged = 0;
+
+  /* See if we need to update our costs to each possible destination */
+  for (int dest = 0; dest <= 3; ++dest) {
+
+    /* Cost from me to destination via neighbor = cost from me to neighbor + cost from neighbor to destination */
+    int newcost = connectcosts0[neighbor] + rcvdpkt->mincost[dest];
+
+    /* Update my route via this neighbor iff the neighbor found a better route.
+     * OR, if the neighbor is currently my best route but they increased the route cost (this handles link changes) */
+    if (newcost < dt0.costs[dest][neighbor] ||
+        (findmincost0(dest) == neighbor && newcost > dt0.costs[dest][neighbor])) {
+
+      printf("Distance table was updated for route %d to %d. "
+             "Cost changed: %d -> %d via %d. We will inform the neighbors.\n",
+             THIS_NODE, dest,
+             dt0.costs[dest][neighbor], newcost, neighbor);
+
+      /* It's cheaper to go via the neighbor, so update our cost */
+      dt0.costs[dest][neighbor] = newcost;
+
+      /* Set the flag to indicate that the distance table was changed */
+      isdistancechanged = 1;
+    }
+  }
+
+  /* If we updated our distance table costs, inform the neighbors so they can
+   * update their costs */
+  if (isdistancechanged == 1) {
+    informneighbors0();
+  } else {
+    printf("Distance table was not updated.\n");
+  }
+
+  /* Print the distance table */
+  printdt0(&dt0);
 
 }
 
@@ -99,4 +149,55 @@ linkhandler0(linkid, newcost)
 /* constant definition in prog3.c from 0 to 1 */
 	
 {
+  /* Print called at time */
+  printf("linkhandler0 called at %f\n", clocktime);
+
+  /* Print debugging info */
+  printf("Link cost was updated for link %d to %d. "
+       "Cost changed: %d -> %d. We will inform the neighbors.\n",
+       THIS_NODE, linkid,
+       dt0.costs[linkid][linkid], newcost);
+
+  /* Update link cost and inform neighbors */
+  connectcosts0[linkid] = newcost;
+  dt0.costs[linkid][linkid] = newcost;
+
+  informneighbors0();
+
+  /* Print the table for debugging */
+  printdt0(&dt0);
+}
+
+/* Return the neighbor with the cheapest cost from me to destination. */
+int findmincost0(int destnode)
+{
+  int minvia = -1;
+  int min = 999;
+  for (int i = 0; i <=3; ++i) {
+    if (dt0.costs[destnode][i] < min) {
+      minvia = i;
+      min = dt0.costs[destnode][i];
+    }
+  }
+  return minvia;
+}
+
+/* Inform neighbors that the distance vector from this node has changed */
+informneighbors0()
+{
+  struct rtpkt p;
+
+  /* Calculate the minimum costs to each destination for p.mincost[] */
+  for (int dest = 0; dest <= 3; ++dest) {
+    int mincostvia = findmincost0(dest);
+    p.mincost[dest] = dt0.costs[dest][mincostvia];
+  }
+
+  /* Inform all the neighbors */
+  p.sourceid = THIS_NODE;
+  for (int neighbor = 0; neighbor <=3; ++neighbor) {
+    if (neighbor == THIS_NODE) continue;
+    p.destid = neighbor;
+    tolayer2(p);
+  }
 }
