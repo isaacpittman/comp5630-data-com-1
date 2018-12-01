@@ -10,6 +10,7 @@ extern struct rtpkt {
 extern int TRACE;
 extern int YES;
 extern int NO;
+extern float clocktime;
 
 struct distance_table 
 {
@@ -21,6 +22,8 @@ struct distance_table
 
 void rtinit2() 
 {
+  /* Print called at time */
+  printf("rtinit2 called at %f\n", clocktime);
 }
 
 
@@ -28,6 +31,8 @@ void rtupdate2(rcvdpkt)
   struct rtpkt *rcvdpkt;
   
 {
+  /* Print called at time */
+  printf("rtupdate2 called at %f\n", clocktime);
 
 }
 

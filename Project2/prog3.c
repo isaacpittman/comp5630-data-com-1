@@ -19,7 +19,7 @@ struct rtpkt {
   int mincost[4];    /* min cost to node 0 ... 3 */
   };
 
-int TRACE = 1;             /* for my debugging */
+int TRACE = 2;             /* for my debugging */
 int YES = 1;
 int NO = 0;
 
@@ -150,7 +150,7 @@ init()                         /* initialize the simulator */
     printf("It is likely that random number generation on your machine\n" ); 
     printf("is different from what this emulator expects.  Please take\n");
     printf("a look at the routine jimsrand() in the emulator code. Sorry. \n");
-    exit();
+    exit(1);
     }
 
    clocktime=0.0;                /* initialize time to 0.0 */
@@ -268,19 +268,19 @@ tolayer2(packet)
  /* be nice: check if source and destination id's are reasonable */
  if (packet.sourceid<0 || packet.sourceid >3) {
    printf("WARNING: illegal source id in your packet, ignoring packet!\n");
-   return;
+   return 0;
    }
  if (packet.destid<0 || packet.destid >3) {
    printf("WARNING: illegal dest id in your packet, ignoring packet!\n");
-   return;
+   return 0;
    }
  if (packet.sourceid == packet.destid)  {
    printf("WARNING: source and destination id's the same, ignoring packet!\n");
-   return;
+   return 0;
    }
  if (connectcosts[packet.sourceid][packet.destid] == 999)  {
    printf("WARNING: source and destination not connected, ignoring packet!\n");
-   return;
+   return 0;
    }
 
 /* make a copy of the packet student just gave me since he/she may decide */
