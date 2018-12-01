@@ -1,6 +1,6 @@
 import socket
 import sys
-
+import os
 
 def print_usage():
     print("Usage: " + sys.argv[0] + " host port GET/PUT file")
@@ -34,17 +34,18 @@ data = []
 # using `htons`.
 # I use `with` so that socket will automatically be closed.
 with socket.create_connection((host, port)) as s:
-    # Use `ascii` encoding when converting string to bytes, because HTTP headers only support ASCII, per
-    #  https://stackoverflow.com/questions/4400678/what-character-encoding-should-i-use-for-a-http-header
-    s.sendall('{method} /{filename} HTTP/1.1\r\n'.format(method=method, filename=filename).encode('ascii'))
+    # Use UTF-8 when encoding, which includes a Byte Order Mark (BOM), so we don't have to worry about endianess
+    s.sendall('{method} /{filename} HTTP/1.0\r\n'.format(method=method, filename=filename).encode('UTF-8'))
+    if method == 'PUT':
+        # Send a Content-Length header to indicate the size of the file we plan to send
+        s.sendall('Content-Length: {} \r\n'.format(os.path.getsize(filename)).encode('UTF-8'))
+    # Must send a blank line `\r\n\` to signal end of headers
+    s.sendall('\r\n'.encode('UTF-8'))
     if method == 'PUT':
         # Assume filename points to a valid file
         # Use `rb` to open the file in readonly mode with binary encoding
         with open(filename, 'rb') as f:
             s.sendfile(f)
-    # Must send a blank line `\r\n\` to signal end of request
-    s.sendall('\r\n'.encode('ascii'))
-
     # In Python 3.5 and later, this call will be retried automatically upon being interrupted by a signal
     while True:
         buffer = s.recv(1024)
