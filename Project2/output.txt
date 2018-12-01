@@ -1,0 +1,1174 @@
+Enter TRACE:rtinit0 called at 0.000000
+rtinit1 called at 0.000000
+rtinit2 called at 0.000000
+rtinit3 called at 0.000000
+rtupdate3 called at 0.946640
+Sender of routing packet: 0
+Distance table was updated for route 3 to 1. Cost changed: 999 -> 8 via 0. We will inform the neighbors.
+Distance table was updated for route 3 to 2. Cost changed: 999 -> 10 via 0. We will inform the neighbors.
+Distance table was updated for route 3 to 3. Cost changed: 999 -> 14 via 0. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7   999
+dest 1|    8   999
+     2|   10     2
+rtupdate0 called at 0.992243
+Sender of routing packet: 1
+Distance table was updated for route 0 to 0. Cost changed: 999 -> 2 via 1. We will inform the neighbors.
+Distance table was updated for route 0 to 2. Cost changed: 999 -> 2 via 1. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1   999   999
+dest 2|    2     3   999
+     3|  999   999     7
+rtupdate3 called at 1.209223
+Sender of routing packet: 2
+Distance table was updated for route 3 to 0. Cost changed: 999 -> 5 via 2. We will inform the neighbors.
+Distance table was updated for route 3 to 1. Cost changed: 999 -> 3 via 2. We will inform the neighbors.
+Distance table was updated for route 3 to 3. Cost changed: 999 -> 4 via 2. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|   10     2
+rtupdate3 called at 1.275716
+Sender of routing packet: 0
+Distance table was updated for route 3 to 2. Cost changed: 10 -> 9 via 0. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+rtupdate2 called at 1.641910
+Sender of routing packet: 0
+Distance table was updated for route 2 to 1. Cost changed: 999 -> 4 via 0. We will inform the neighbors.
+Distance table was updated for route 2 to 2. Cost changed: 999 -> 6 via 0. We will inform the neighbors.
+Distance table was updated for route 2 to 3. Cost changed: 999 -> 10 via 0. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3   999   999
+dest 1|    4     1   999
+     3|   10   999     2
+rtupdate1 called at 1.870574
+Sender of routing packet: 0
+Distance table was updated for route 1 to 1. Cost changed: 999 -> 2 via 0. We will inform the neighbors.
+Distance table was updated for route 1 to 2. Cost changed: 999 -> 4 via 0. We will inform the neighbors.
+Distance table was updated for route 1 to 3. Cost changed: 999 -> 8 via 0. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1   999
+dest 2|    4     1
+     3|    8   999
+rtupdate2 called at 2.165707
+Sender of routing packet: 1
+Distance table was updated for route 2 to 0. Cost changed: 999 -> 2 via 1. We will inform the neighbors.
+Distance table was updated for route 2 to 2. Cost changed: 999 -> 2 via 1. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2   999
+dest 1|    4     1   999
+     3|   10   999     2
+rtupdate0 called at 2.406722
+Sender of routing packet: 2
+Distance table was updated for route 0 to 0. Cost changed: 999 -> 6 via 2. We will inform the neighbors.
+Distance table was updated for route 0 to 1. Cost changed: 999 -> 4 via 2. We will inform the neighbors.
+Distance table was updated for route 0 to 3. Cost changed: 999 -> 5 via 2. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4   999
+dest 2|    2     3   999
+     3|  999     5     7
+rtupdate2 called at 2.421268
+Sender of routing packet: 3
+Distance table was updated for route 2 to 0. Cost changed: 999 -> 9 via 3. We will inform the neighbors.
+Distance table was updated for route 2 to 2. Cost changed: 999 -> 4 via 3. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     9
+dest 1|    4     1   999
+     3|   10   999     2
+rtupdate1 called at 2.810933
+Sender of routing packet: 2
+Distance table was updated for route 1 to 0. Cost changed: 999 -> 4 via 2. We will inform the neighbors.
+Distance table was updated for route 1 to 1. Cost changed: 999 -> 2 via 2. We will inform the neighbors.
+Distance table was updated for route 1 to 3. Cost changed: 999 -> 3 via 2. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     4
+dest 2|    4     1
+     3|    8     3
+rtupdate3 called at 3.078114
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+rtupdate2 called at 3.292663
+Sender of routing packet: 3
+Distance table was updated for route 2 to 1. Cost changed: 999 -> 10 via 3. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     9
+dest 1|    4     1    10
+     3|   10   999     2
+rtupdate2 called at 4.063167
+Sender of routing packet: 0
+Distance table was updated for route 2 to 2. Cost changed: 6 -> 5 via 0. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     9
+dest 1|    4     1    10
+     3|   10   999     2
+rtupdate0 called at 4.103641
+Sender of routing packet: 3
+Distance table was updated for route 0 to 0. Cost changed: 999 -> 14 via 3. We will inform the neighbors.
+Distance table was updated for route 0 to 2. Cost changed: 999 -> 9 via 3. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4   999
+dest 2|    2     3     9
+     3|  999     5     7
+rtupdate2 called at 4.169482
+Sender of routing packet: 3
+Distance table was updated for route 2 to 0. Cost changed: 9 -> 7 via 3. We will inform the neighbors.
+Distance table was updated for route 2 to 1. Cost changed: 10 -> 5 via 3. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|   10   999     2
+rtupdate0 called at 4.330418
+Sender of routing packet: 3
+Distance table was updated for route 0 to 1. Cost changed: 999 -> 15 via 3. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    15
+dest 2|    2     3     9
+     3|  999     5     7
+rtupdate3 called at 4.556901
+Sender of routing packet: 2
+Distance table was updated for route 3 to 0. Cost changed: 5 -> 4 via 2. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 4.643052
+Sender of routing packet: 0
+Distance table was updated for route 1 to 2. Cost changed: 4 -> 3 via 0. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    8     3
+rtupdate3 called at 5.093102
+Sender of routing packet: 0
+Distance table was updated for route 3 to 3. Cost changed: 14 -> 12 via 0. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate0 called at 5.212747
+Sender of routing packet: 3
+Distance table was updated for route 0 to 0. Cost changed: 14 -> 12 via 3. We will inform the neighbors.
+Distance table was updated for route 0 to 1. Cost changed: 15 -> 10 via 3. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|  999     5     7
+rtupdate3 called at 5.271212
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate3 called at 5.378019
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate3 called at 5.740387
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 5.820477
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    8     3
+rtupdate3 called at 5.934875
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate2 called at 6.042466
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|   10   999     2
+rtupdate0 called at 6.071281
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|  999     5     7
+rtupdate1 called at 6.204975
+Sender of routing packet: 2
+Distance table was updated for route 1 to 0. Cost changed: 4 -> 3 via 2. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    8     3
+rtupdate1 called at 6.885776
+Sender of routing packet: 0
+Distance table was updated for route 1 to 3. Cost changed: 8 -> 6 via 0. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate3 called at 7.011692
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate0 called at 7.020665
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|  999     5     7
+rtupdate1 called at 7.059981
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate2 called at 7.160166
+Sender of routing packet: 1
+Distance table was updated for route 2 to 3. Cost changed: 999 -> 9 via 1. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|   10     9     2
+rtupdate2 called at 7.463797
+Sender of routing packet: 0
+Distance table was updated for route 2 to 3. Cost changed: 10 -> 8 via 0. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     9     2
+rtupdate0 called at 7.732363
+Sender of routing packet: 1
+Distance table was updated for route 0 to 3. Cost changed: 999 -> 9 via 1. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    9     5     7
+rtupdate3 called at 7.961492
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 8.438167
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate2 called at 8.630245
+Sender of routing packet: 1
+Distance table was updated for route 2 to 3. Cost changed: 9 -> 4 via 1. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate3 called at 8.810221
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 9.513271
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate0 called at 9.514288
+Sender of routing packet: 2
+Distance table was updated for route 0 to 0. Cost changed: 6 -> 5 via 2. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    9     5     7
+rtupdate0 called at 10.531355
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    9     5     7
+rtupdate3 called at 10.568172
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate2 called at 10.576745
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate1 called at 10.704538
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate1 called at 10.717531
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate1 called at 10.785618
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate1 called at 10.899284
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate2 called at 11.448272
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate2 called at 11.497224
+Sender of routing packet: 3
+Distance table was updated for route 2 to 0. Cost changed: 7 -> 6 via 3. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate3 called at 12.432931
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate0 called at 12.495062
+Sender of routing packet: 1
+Distance table was updated for route 0 to 3. Cost changed: 9 -> 4 via 1. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate3 called at 12.660058
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 12.728787
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate3 called at 13.081673
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate0 called at 13.196969
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate2 called at 13.226393
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate2 called at 13.394321
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate1 called at 13.936476
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate2 called at 14.039762
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate0 called at 14.161459
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate3 called at 14.580104
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 14.962625
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate3 called at 15.028335
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 15.191917
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate2 called at 15.221402
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate1 called at 15.371104
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate2 called at 15.812905
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate3 called at 15.862569
+Sender of routing packet: 0
+Distance table was updated for route 3 to 3. Cost changed: 12 -> 11 via 0. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate2 called at 16.095697
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate0 called at 16.123230
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate2 called at 16.337982
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+rtupdate1 called at 16.484917
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+rtupdate0 called at 17.140701
+Sender of routing packet: 3
+Distance table was updated for route 0 to 0. Cost changed: 12 -> 11 via 3. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate2 called at 17.500748
+Sender of routing packet: 0
+Distance table was updated for route 2 to 3. Cost changed: 8 -> 7 via 0. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate0 called at 17.526705
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate1 called at 17.749660
+Sender of routing packet: 0
+Distance table was updated for route 1 to 3. Cost changed: 6 -> 5 via 0. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+rtupdate2 called at 17.830164
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate3 called at 18.115559
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate3 called at 18.272055
+Sender of routing packet: 2
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate0 called at 18.693357
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate1 called at 18.751823
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+rtupdate2 called at 18.937742
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate2 called at 19.054121
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate0 called at 19.110655
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate1 called at 20.276699
+Sender of routing packet: 2
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+rtupdate0 called at 20.976452
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate0 called at 22.336203
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate0 called at 22.397861
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate0 called at 22.615276
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate0 called at 22.862549
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate0 called at 23.856461
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate0 called at 25.707354
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate0 called at 27.424042
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+linkhandler0 called at 10000.000000
+Link cost was updated for link 0 to 1. Cost changed: 1 -> 20. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|   20     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+linkhandler1 called at 10000.000000
+Link cost was updated for link 1 to 0. Cost changed: 1 -> 20. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|   20     3
+dest 2|    3     1
+     3|    5     3
+rtupdate1 called at 10001.516602
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|   20     3
+dest 2|    3     1
+     3|    5     3
+rtupdate2 called at 10001.545898
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate0 called at 10001.578125
+Sender of routing packet: 1
+Distance table was updated for route 0 to 2. Cost changed: 2 -> 21 via 1. We will inform the neighbors.
+Distance table was updated for route 0 to 3. Cost changed: 4 -> 23 via 1. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+rtupdate3 called at 10001.874023
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate2 called at 10002.299805
+Sender of routing packet: 1
+Distance table was updated for route 2 to 0. Cost changed: 2 -> 4 via 1. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     4     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate2 called at 10002.904297
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     4     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate3 called at 10002.911133
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 10003.317383
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|   20     3
+dest 2|    3     1
+     3|    5     3
+rtupdate1 called at 10004.138672
+Sender of routing packet: 2
+Distance table was updated for route 1 to 0. Cost changed: 3 -> 4 via 2. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|   20     4
+dest 2|    3     1
+     3|    5     3
+rtupdate3 called at 10004.176758
+Sender of routing packet: 2
+Distance table was updated for route 3 to 0. Cost changed: 4 -> 5 via 2. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+rtupdate0 called at 10004.265625
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+rtupdate0 called at 10004.653320
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+rtupdate2 called at 10005.139648
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     4     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate0 called at 10006.161133
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+rtupdate2 called at 10007.026367
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     4     6
+dest 1|    4     1     5
+     3|    7     4     2
+linkhandler0 called at 20000.000000
+Link cost was updated for link 0 to 1. Cost changed: 20 -> 1. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+linkhandler1 called at 20000.000000
+Link cost was updated for link 1 to 0. Cost changed: 20 -> 1. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    5     3
+rtupdate3 called at 20000.333984
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+rtupdate0 called at 20000.511719
+Sender of routing packet: 1
+Distance table was updated for route 0 to 2. Cost changed: 21 -> 2 via 1. We will inform the neighbors.
+Distance table was updated for route 0 to 3. Cost changed: 23 -> 4 via 1. We will inform the neighbors.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate2 called at 20000.621094
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     4     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate3 called at 20000.625000
+Sender of routing packet: 0
+Distance table was not updated.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+rtupdate1 called at 20001.248047
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    5     3
+rtupdate2 called at 20002.406250
+Sender of routing packet: 1
+Distance table was updated for route 2 to 0. Cost changed: 4 -> 2 via 1. We will inform the neighbors.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate1 called at 20002.416016
+Sender of routing packet: 0
+Distance table was not updated.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    5     3
+rtupdate0 called at 20002.576172
+Sender of routing packet: 2
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate1 called at 20003.029297
+Sender of routing packet: 2
+Distance table was updated for route 1 to 0. Cost changed: 4 -> 3 via 2. We will inform the neighbors.
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+rtupdate0 called at 20003.050781
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate3 called at 20003.496094
+Sender of routing packet: 2
+Distance table was updated for route 3 to 0. Cost changed: 5 -> 4 via 2. We will inform the neighbors.
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+rtupdate2 called at 20003.912109
+Sender of routing packet: 0
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate2 called at 20004.050781
+Sender of routing packet: 1
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+rtupdate0 called at 20004.742188
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+rtupdate2 called at 20005.789062
+Sender of routing packet: 3
+Distance table was not updated.
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+
+Simulator terminated at t=20005.789062, no packets in medium
